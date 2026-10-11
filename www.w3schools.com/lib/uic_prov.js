@@ -260,7 +260,7 @@ const uic_prov_al = () => {
         if (stickySkyscraper && stickySkyscraper.style.display != "none") {
           stickySkyscraper.children[0].appendChild(provStickySky);
         } else {
-          stickySkyscraper.remove();
+          if (stickySkyscraper) { stickySkyscraper.remove(); }
           if (typeof fix_stickyad === "function") { 
             window.removeEventListener("scroll", fix_stickyad);
             window.removeEventListener("resize", fix_stickyad);

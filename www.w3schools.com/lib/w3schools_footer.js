@@ -491,13 +491,13 @@ function w3_close_all_nav() {
   if (window.addEventListener) { 
     document.getElementById("main").addEventListener("click", w3_close_all_nav, true);
     if (m) m.addEventListener("click", w3_close_all_topnav, true);
-    document.getElementById("right").addEventListener("click", w3_close_all_nav, true);
+    var rightElm = document.getElementById("right"); if (rightElm) { rightElm.addEventListener("click", w3_close_all_nav, true); }
     document.getElementById("main").addEventListener("wheel", w3_close_all_nav, true);
     document.getElementById("main").addEventListener("touchstart", w3_close_all_nav, true);
   } else if (window.attachEvent) {         
     document.getElementById("main").attachEvent("onclick", w3_close_all_nav);
     if (m) m.attachEvent("onclick", w3_close_all_topnav);
-    document.getElementById("right").attachEvent("onclick", w3_close_all_nav);
+    var rightElm2 = document.getElementById("right"); if (rightElm2) { rightElm2.attachEvent("onclick", w3_close_all_nav); }
   }
   if ('ontouchstart' in window || 'onmsgesturechange' in window) {
     if (document.getElementById("leftmenuinnerinner")) document.getElementById("leftmenuinnerinner").style.overflowY = "scroll";

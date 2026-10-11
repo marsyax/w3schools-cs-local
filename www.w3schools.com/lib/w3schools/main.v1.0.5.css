@@ -841,3 +841,8 @@ body.darkpagetheme .ws-share-btn {background:#121f2b;color:#ddd;}
 @media screen and (max-width:600px) {
 .tool-hero-share .ws-share--float {display:flex;margin:0;}
 }
+
+/* offline copy: the #right column (socials + skyscraper ad) has been removed, so #main
+   takes the full width and the divider that separated the two columns is gone.
+   Same effect the site's own ad code applies when it drops that column. */
+#main {width:100%;border-right:none;}
