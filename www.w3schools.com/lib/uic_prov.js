@@ -152,7 +152,7 @@ const uic_prov_al = () => {
       }
       const rightElement = document.getElementById("right");
       if (rightElement) { rightElement.remove(); }
-      if (bottom.length > 0) {
+      if (bottom && bottom.length > 0) {
         const bottomAdParentElement = bottom[0].parentElement;
         if (bottomAdParentElement) {
           const previousElement = bottomAdParentElement.previousElementSibling;
