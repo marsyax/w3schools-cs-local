@@ -480,7 +480,7 @@ function w3_close_all_nav() {
     sidemenuitemintoview();
   }
   tn = (document.getElementById("topnav") || document.getElementById("subtopnav"));
-  x = tn.getElementsByTagName("A");
+  x = tn ? tn.getElementsByTagName("A") : [];
   for (i = 0; i < x.length; i++) {
     a = document.location.pathname;
     b = x[i].pathname;
