@@ -1,0 +1,281 @@
+/* Certification section styles */
+.cert-section {
+  display: flex;
+  gap: 0;
+  margin: 30px 0;
+  font-family: 'Source Sans Pro Topnav', sans-serif;
+  border: 1px solid #dfe3e7;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cert-card {
+  flex: 1 1 280px;
+  border-right: 1px solid #dbe0e8;
+  padding: 24px;
+  text-align: left;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-card-bottom {
+  margin-top: auto;
+}
+
+.cert-card-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 8px;
+}
+
+.cert-card-icon {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+}
+
+.cert-card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cert-card-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  margin: 7px 0 8px;
+  font-family: 'Source Sans Pro Topnav', sans-serif;
+}
+
+.cert-card-desc,
+.cert-info-desc {
+  font-size: 17px;
+  color: #000;
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+.cert-card-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #04AA6D;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: auto;
+  margin-bottom: 0;
+  align-self: flex-start;
+}
+
+.cert-card-btn:hover {
+  background: #038857;
+  color: #fff;
+}
+
+.cert-card-btn.cert-btn-white {
+  margin-top: 12px;
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.cert-card-btn.cert-btn-white:hover {
+  background: #04AA6D !important;
+  color: #fff !important;
+  border-color: #04AA6D !important;
+}
+
+.cert-info {
+  flex: 1 1 320px;
+  padding: 24px;
+  border: none;
+  border-radius: 0;
+  background: rgba(4, 170, 109, 0.07);
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-info-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  margin: 8px 0 12px;
+  font-family: 'Source Sans Pro Topnav', sans-serif;
+}
+
+.cert-info-desc {
+  margin-bottom: 16px;
+}
+
+.cert-info-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 4px;
+}
+
+.cert-preview {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .cert-section {
+    flex-direction: column;
+  }
+}
+
+body.darkpagetheme .cert-card {
+  background: #1d2a35;
+  border-color: #38444d;
+}
+
+body.darkpagetheme .cert-card-title,
+body.darkpagetheme .cert-info-title,
+body.darkpagetheme .cert-info-price {
+  color: #fff;
+}
+
+body.darkpagetheme .cert-card-desc,
+body.darkpagetheme .cert-info-desc {
+  color: #94a3b8;
+}
+
+body.darkpagetheme .cert-section {
+  border: 1px solid #38444d;
+}
+
+/* Adventure app promo variant: blue-tint cert-info panel used on html, css, java, python in place of the Get Certified price panel */
+.cert-info.adv-promo {
+  background: rgba(163, 207, 251, 0.25);
+}
+
+body.darkpagetheme .cert-info.adv-promo {
+  background: #1d2a35;
+  border-color: #38444d;
+}
+
+/* Default (up to 1256px): phone sits beside the text, and the store
+   badges drop to their own full-width row below both. Above 1256px the
+   box has enough room (even past the 993px sidebar breakpoint, since
+   the 250px tutorial sidebar eats into this box's actual width up to
+   roughly a 1256px viewport) to switch to the more spacious layout
+   below, with badges nested under the paragraph and a taller phone. */
+.adv-promo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "text phone"
+    "badges badges";
+  align-items: center;
+  gap: 20px;
+}
+
+.adv-promo-text {
+  display: contents;
+}
+
+.adv-promo-copy {
+  grid-area: text;
+  min-width: 0;
+}
+
+.adv-promo-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #666666;
+  margin: 0 0 8px;
+}
+
+.adv-promo-badges {
+  grid-area: badges;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.adv-promo-badge {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+.adv-promo-phone {
+  grid-area: phone;
+  position: relative;
+  justify-self: end;
+}
+
+.adv-promo-phone img:first-child {
+  width: 90px;
+  height: auto;
+  display: block;
+  border: 6px solid #16181d;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.adv-promo-mascot {
+  position: absolute;
+  right: -10px;
+  bottom: -8px;
+  width: 36px;
+  height: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .adv-promo-badges {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1257px) {
+  .adv-promo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .adv-promo-text {
+    display: block;
+    flex: 1 1 220px;
+    min-width: 0;
+  }
+
+  .adv-promo-badges {
+    margin-top: 12px;
+  }
+
+  .adv-promo-phone {
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  .adv-promo-phone img:first-child {
+    width: 120px;
+  }
+
+  .adv-promo-mascot {
+    right: -14px;
+    bottom: -10px;
+    width: 48px;
+  }
+}
+
+body.darkpagetheme .adv-promo-eyebrow {
+  color: #94a3b8;
+}
