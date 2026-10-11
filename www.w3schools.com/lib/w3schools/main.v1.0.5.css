@@ -82,9 +82,9 @@ body.darkpagetheme #sidenav #leftmenuinnerinner .overview_body > a:hover {backgr
 body.darkpagetheme #sidenav #leftmenuinnerinner .overview_body > a.active:hover {background-color:#151a1e!important;}
 #sidenav a.active:hover {background-color:#c6ccd2!important;}
 /*slutt*/
-#main {padding:16px;margin-top:90px;}
+#main {padding:16px;margin-top:0;}
 #mainLeaderboard {height:90px}
-#right {text-align:center;padding:16px 16px 0 0;margin-top:90px;}
+#right {text-align:center;padding:16px 16px 0 0;margin-top:0;}
 #right a {text-decoration:none}
 #skyscraper {min-height:600px}
 .sidesection {margin-bottom:32px;}
@@ -742,7 +742,7 @@ body.darkpagetheme .w3-example-tab-header.active-tab {background-color:rgb(21, 3
 .secondary-top-nav-bar > div,.secondary-top-nav-bar > div > div {background-color: inherit;}
 .topnavbar a {padding:5px 15px 5px 15px !important;font-size:15px!important;}
 a.topnav-icons {font-size:17px!important;}
-#leftmenuinner {padding-top:87px;}
+#leftmenuinner {padding-top:0;}
 /* NYE farger */
 .ws-black {background-color:#282A35!important;color: white!important;}
 .ws-hover-black:hover {background-color:#000!important;color: white!important;}
@@ -841,3 +841,8 @@ body.darkpagetheme .ws-share-btn {background:#121f2b;color:#ddd;}
 @media screen and (max-width:600px) {
 .tool-hero-share .ws-share--float {display:flex;margin:0;}
 }
+
+/* offline copy: the #right column (socials + skyscraper ad) has been removed, so #main
+   takes the full width and the divider that separated the two columns is gone.
+   Same effect the site's own ad code applies when it drops that column. */
+#main {width:100%;border-right:none;}
